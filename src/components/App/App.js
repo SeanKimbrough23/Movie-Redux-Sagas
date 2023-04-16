@@ -3,8 +3,7 @@ import "./App.css";
 import MovieList from "../MovieList/MovieList";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import AddMovies from "../AddMovies/AddMovies";
-import NavBar from "../Navbar/Navbar";
-import EditPage from "../EditPage/EditPage";
+import NavigationBar from "../NavigationBar/NavigationBar";
 
 function App() {
   return (
@@ -22,10 +21,6 @@ function App() {
         {/* Add Movie Page */}
         <Route path="/addMovie">
           <MovieForm />
-        </Route>
-        {/* Edit page */}
-        <Route path="/edit/:id">
-          <EditPage />
         </Route>
       </Router>
     </div>
