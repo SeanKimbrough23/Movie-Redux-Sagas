@@ -2,7 +2,7 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import MovieList from "../MovieList/MovieList";
 import MovieDetails from "../MovieDetails/MovieDetails";
-import MovieForm from "../MovieForm/MovieForm";
+import AddMovies from "../AddMovies/AddMovies";
 import NavBar from "../Navbar/Navbar";
 import EditPage from "../EditPage/EditPage";
 
