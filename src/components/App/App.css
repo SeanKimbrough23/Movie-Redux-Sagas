@@ -1,7 +1,10 @@
+body {
+  background-color: rgb(113, 112, 112);
+}
+
 .App {
   text-align: center;
 }
-
 
 .App-header {
   background-color: #222;
@@ -18,7 +21,71 @@
   font-size: large;
 }
 
+.poster {
+  max-height: 250px;
+  max-width: 250px;
+}
+
+.movie-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-edit {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+
+.edit-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  color: white;
+}
+
+.add-movie-form {
+  background-color: white;
+  margin: auto;
+  width: 800px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.add-movie-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-movie-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
