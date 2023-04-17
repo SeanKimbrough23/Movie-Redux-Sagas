@@ -1,14 +1,16 @@
 import { HashRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import MovieList from "../MovieList/MovieList";
-import MovieDetails from "../MovieDetails/MovieDetails";
 import AddMovies from "../AddMovies/AddMovies";
 import NavigationBar from "../NavigationBar/NavigationBar";
+import EditMoviePage from "../EditMoviePage/EditMoviePage";
+import MovieDetails from "../MovieDetails/MovieDetails";
+import Calendar from "../Calendar/Calendar";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <NavigationBar />
       <Router>
         <Route path="/" exact>
           <MovieList />
@@ -18,9 +20,16 @@ function App() {
         <Route path="/details/:id">
           <MovieDetails />
         </Route>
-        {/* Add Movie Page */}
+        {/* Add a Movie Page */}
         <Route path="/addMovie">
-          <MovieForm />
+          <AddMovies />
+        </Route>
+        {/* Edit page */}
+        <Route path="/edit/:id">
+          <EditMoviePage />
+        </Route>
+        <Route path="/Calendar">
+          <Calendar />
         </Route>
       </Router>
     </div>

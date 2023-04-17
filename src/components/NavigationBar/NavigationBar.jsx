@@ -6,7 +6,7 @@ import { HashRouter as Router, Link } from "react-router-dom";
 const NavigationBar = () => {
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="relative">
         <Toolbar>
           <h2 className="nav-title">Home</h2>
           <Router>
@@ -20,6 +20,14 @@ const NavigationBar = () => {
               style={{ textDecoration: "none", color: "white" }}
             >
               <Button variant="inherit">Add Movie</Button>
+            </Link>
+          </Router>
+          <Router>
+            <Link
+              to="/Calendar"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Button variant="inherit">Calendar</Button>
             </Link>
           </Router>
         </Toolbar>

@@ -58,9 +58,7 @@ const MovieDetails = () => {
             </Card>
           </div>
         </div>
-      ) : (
-        <></>
-      )}
+      ) : null}
     </>
   );
 };

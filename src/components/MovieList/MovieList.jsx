@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import MovieItem from "../MovieItem/MovieItem";
+import MovieItems from "../MovieItems/MovieItems";
 import "./MovieList.css";
 
 function MovieList() {
@@ -15,10 +15,10 @@ function MovieList() {
 
   return (
     <main>
-      <h1>MovieList</h1>
+      <h1>Movies</h1>
       <section className="movies">
         {movies.map((movie) => {
-          return <MovieItem key={movie.id} movie={movie} />;
+          return <MovieItems key={movie.id} movie={movie} />;
         })}
       </section>
     </main>
