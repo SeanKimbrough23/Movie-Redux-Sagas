@@ -6,6 +6,7 @@ import NavigationBar from "../NavigationBar/NavigationBar";
 import EditMoviePage from "../EditMoviePage/EditMoviePage";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import Calendar from "../Calendar/Calendar";
+import RequestMovie from "../RequestMovie/RequestMovie";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Router>
         <Route path="/" exact>
           <MovieList />
+        </Route>
+        <Route path="/Request">
+          <RequestMovie />
         </Route>
 
         {/* Details page */}

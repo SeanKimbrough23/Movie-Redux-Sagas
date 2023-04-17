@@ -12,33 +12,37 @@ const Calendar = () => {
   const [value, setValue] = useState(new Date());
   const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 5, 12]);
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <StaticDateTimePicker
-        orientation="landscape"
-        openTo="day"
-        value={value}
-        disableFuture
-        onChange={(newValue) => {
-          setValue(newValue);
-        }}
-        textField={(params) => <textField {...params} />}
-        renderDay={(day, _value, DayComponentProps) => {
-          const isSelected =
-            !DayComponentProps.outsideCurrentMonth &&
-            highlightedDays.indexOf(day.getDate()) > 0;
+    <div>
+      <h1 className="Calendar">Calendar</h1>
 
-          return (
-            <Badge
-              key={day.toString()}
-              overlap="circular"
-              badgeContent={isSelected ? <CheckIcon /> : undefined}
-            >
-              <PickersDay {...DayComponentProps} />
-            </Badge>
-          );
-        }}
-      />
-    </LocalizationProvider>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <StaticDateTimePicker
+          orientation="landscape"
+          openTo="day"
+          value={value}
+          onChange={(newValue) => {
+            setValue(newValue);
+          }}
+          textField={(params) => <textField {...params} />}
+          renderDay={(day, _value, DayComponentProps) => {
+            const isSelected =
+              !DayComponentProps.outsideCurrentMonth &&
+              highlightedDays.indexOf(day.getDate()) > 0;
+
+            return (
+              <Badge
+                key={day.toString()}
+                overlap="circular"
+                badgeContent={isSelected ? <CheckIcon /> : undefined}
+              >
+                <PickersDay {...DayComponentProps} />
+              </Badge>
+            );
+          }}
+        />
+      </LocalizationProvider>
+    </div>
   );
 };
+
 export default Calendar;

@@ -108,12 +108,10 @@ const EditMoviePage = () => {
   };
 
   return (
-    <div className="movie-edit">
-      <Card sx={{ maxWidth: 700, padding: 2 }}>
+    <div className="edit">
+      <Card sx={{ maxWidth: 500, padding: 1 }}>
         <CardContent>
-          <Typography sx={{ fontSize: 30 }} gutterBottom>
-            {movieDetails.title}
-          </Typography>
+          <Typography sx={{ fontSize: 20 }}>{movieDetails.title}</Typography>
           <div className="edit-content">
             <div className="edit-inputs">
               <TextField
@@ -129,7 +127,7 @@ const EditMoviePage = () => {
                 id="outlined-basic"
                 label="Image"
                 variant="outlined"
-                sx={{ width: 400 }}
+                sx={{ width: 2git 00 }}
               />
               <TextField
                 onChange={() => handleInputChange("description")}
